@@ -1,0 +1,61 @@
+<html>
+    <head>
+	<style>
+table, th, td {
+  border: 1px solid black;
+}
+body {
+    background-image: url('https://www.voxco.com/wp-content/uploads/2021/09/Sentiment-Analysis1.jpg');
+  }
+</style>
+<center> <title>{{ title }} Sentiment Analysis</title>
+    </head>
+    <body>
+        <h1>Sentiment Analysis Tool</h1>
+        <form method="POST">
+            <textarea name="text1" placeholder="Car Review ...." rows="8" cols="140"></textarea><br><br>
+
+            <input class="example_a" type="submit">
+        </form>
+
+        <form action = "{{ url_for('csv_file')}}" method = "post" enctype="multipart/form-data">  
+          <input type="file" name="file" />  
+          <input type = "submit" value="Upload">  
+      </form> 
+
+        {% if final %}
+        <div>
+			<h2>Score table</h2>
+
+
+
+<table style="width:50%">
+  <tr>
+    <th>SENTIMENT TYPE</th>
+    <th>SCORE</th> 
+  </tr>
+  <tr>
+    <td>Positive</td>
+    <td>{{text2}}</td>
+    
+  </tr>
+  <tr>
+    <td>Neutral</td>
+    <td>{{text3}}</td>
+    
+  </tr>
+  <tr>
+    <td>Negative</td>
+    <td>{{text5}}</td>
+    
+  </tr>
+
+</table>
+            {% else %}
+            <p></p>
+            {% endif %}
+        </div>
+    </body>
+  </center>
+</html>
+

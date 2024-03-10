@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sentiments</title>      <style>
+      
+         *{
+            color:black;
+            text-align:center;
+            font-family:cursive;
+         }
+         
+
+         input[type=submit] {
+                            background-color: black;
+                            color: black;
+                            font-size:15px;
+                             }
+                             p{
+                             font-size:30px;
+                             }
+         .center {
+		display: flex;
+  		justify-content: right;
+      margin-right: 250px;
+  		align-items: center;
+ 		height: 400px;
+ 
+		}
+	h1{
+		font-size:70px;
+		}
+	input[type=date] {
+                            background-color: black;
+                            color: black;
+	      }
+	      select{
+		      background-color:black;
+	      }
+	option{
+		background-color:black;
+		}
+      </style>
+</head>
+
+<body>
+
+    <h1>{{name}}</h1>
+    {{data | safe}}
+
+</body>
+</html>
+
